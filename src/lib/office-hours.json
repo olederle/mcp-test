@@ -1,0 +1,17 @@
+{
+    "officeHours": [
+        {
+            "name": "Anwander Eugen",
+            "mail": "eugen.anwander@htldornbirn.at",
+            "initials": "ANW",
+            "day": "MO",
+            "startTime": "13:10",
+            "endTime": "14:00"
+        },
+        {
+            "name": "Bachlechner-Fink Eva-Maria",
+            "mail": "eva.bachlechner@htldornbirn.at",
+            "initials": "BAE"
+        }
+    ]
+}

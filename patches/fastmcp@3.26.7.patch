@@ -1,0 +1,62 @@
+diff --git a/dist/bin/fastmcp.cjs b/dist/bin/fastmcp.cjs
+index dd8c9927db9c1a1bbdec69adc83a6eb3ed7ea281..db31c9391a8f36208cd3a85acdfab3b617a740db 100755
+--- a/dist/bin/fastmcp.cjs
++++ b/dist/bin/fastmcp.cjs
+@@ -26,7 +26,7 @@ await _yargs2.default.call(void 0, _helpers.hideBin.call(void 0, process.argv)).
+   },
+   async (argv) => {
+     try {
+-      const command = argv.watch ? `npx @wong2/mcp-cli npx tsx --watch ${argv.file}` : `npx @wong2/mcp-cli npx tsx ${argv.file}`;
++      const command = argv.watch ? `pnpx @wong2/mcp-cli pnpx tsx --watch ${argv.file}` : `pnpx @wong2/mcp-cli pnpx tsx ${argv.file}`;
+       if (argv.verbose) {
+         console.log(`[FastMCP] Starting server: ${command}`);
+         console.log(`[FastMCP] File: ${argv.file}`);
+@@ -66,7 +66,7 @@ await _yargs2.default.call(void 0, _helpers.hideBin.call(void 0, process.argv)).
+       await _execa.execa.call(void 0, {
+         stderr: "inherit",
+         stdout: "inherit"
+-      })`npx @modelcontextprotocol/inspector npx tsx ${argv.file}`;
++      })`pnpx @modelcontextprotocol/inspector pnpx tsx ${argv.file}`;
+     } catch (error) {
+       console.error(
+         "[FastMCP Error] Failed to inspect server:",
+@@ -100,7 +100,7 @@ await _yargs2.default.call(void 0, _helpers.hideBin.call(void 0, process.argv)).
+         process.exit(1);
+       }
+       console.log(`[FastMCP] Validating server file: ${filePath}`);
+-      const command = argv.strict ? `npx tsc --noEmit --strict ${filePath}` : `npx tsc --noEmit ${filePath}`;
++      const command = argv.strict ? `pnpx tsc --noEmit --strict ${filePath}` : `pnpx tsc --noEmit ${filePath}`;
+       try {
+         await _execa.execa.call(void 0, {
+           shell: true,
+diff --git a/dist/bin/fastmcp.js b/dist/bin/fastmcp.js
+index 5c6478d0f05156c91da809ac621365e980568421..1d76b2ddcdd26456f02849dea2700c708dd5bf20 100755
+--- a/dist/bin/fastmcp.js
++++ b/dist/bin/fastmcp.js
+@@ -26,7 +26,7 @@ await yargs(hideBin(process.argv)).scriptName("fastmcp").command(
+   },
+   async (argv) => {
+     try {
+-      const command = argv.watch ? `npx @wong2/mcp-cli npx tsx --watch ${argv.file}` : `npx @wong2/mcp-cli npx tsx ${argv.file}`;
++      const command = argv.watch ? `pnpx @wong2/mcp-cli pnpx tsx --watch ${argv.file}` : `pnpx @wong2/mcp-cli pnpx tsx ${argv.file}`;
+       if (argv.verbose) {
+         console.log(`[FastMCP] Starting server: ${command}`);
+         console.log(`[FastMCP] File: ${argv.file}`);
+@@ -66,7 +66,7 @@ await yargs(hideBin(process.argv)).scriptName("fastmcp").command(
+       await execa({
+         stderr: "inherit",
+         stdout: "inherit"
+-      })`npx @modelcontextprotocol/inspector npx tsx ${argv.file}`;
++      })`pnpx @modelcontextprotocol/inspector pnpx tsx ${argv.file}`;
+     } catch (error) {
+       console.error(
+         "[FastMCP Error] Failed to inspect server:",
+@@ -100,7 +100,7 @@ await yargs(hideBin(process.argv)).scriptName("fastmcp").command(
+         process.exit(1);
+       }
+       console.log(`[FastMCP] Validating server file: ${filePath}`);
+-      const command = argv.strict ? `npx tsc --noEmit --strict ${filePath}` : `npx tsc --noEmit ${filePath}`;
++      const command = argv.strict ? `pnpx tsc --noEmit --strict ${filePath}` : `pnpx tsc --noEmit ${filePath}`;
+       try {
+         await execa({
+           shell: true,

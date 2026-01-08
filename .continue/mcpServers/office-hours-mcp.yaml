@@ -1,0 +1,10 @@
+name: Office Hours MCP
+version: 1.0.0
+schema: v1
+
+mcpServers:
+  - name: Office Hours MCP
+    command: node
+    args:
+      - ./dist/server.js
+    connectionTimeout: 180000

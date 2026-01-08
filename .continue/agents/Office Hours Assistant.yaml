@@ -1,0 +1,12 @@
+name: Office Hours Assistant
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Devstral 2
+    provider: mistral
+    model: devstral-medium-latest
+    apiKey: ${{ secrets.MISTRAL_API_KEY }}
+    roles:
+      - chat
+
